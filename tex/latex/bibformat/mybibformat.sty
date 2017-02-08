@@ -64,7 +64,7 @@ unpublished]{title}{\mkbibquote{#1\isdot}}
   \newcommand*{\bibandcase}{\changefont{\bibstring{and}}}
   % Use small caps also for smartand (defined below)
   \AtBeginDocument{%
-    \DeclareNameAlias{author}{family-given/given-family:smartend}%
+    % \DeclareNameAlias{author}{family-given/given-family:smartend}%
   }
   \renewcommand*{\bibfont}{\small}
   }
@@ -94,26 +94,26 @@ unpublished]{title}{\mkbibquote{#1\isdot}}
 }
 
 % Declare smartand format to use small caps in the bibliography
-\catcode`\&3\relax%
-\catcode`\@11\relax%
-\DeclareNameFormat{family-given/given-family:smartend}{%
-  \def\lbx@es@smartand@e##1&{%
-    \endgroup \iftoggle{textcite}{e}{\textsc{e}}\nobreakspace}%
-  \def\lbx@es@smartand@y##1&{%
-    \endgroup \iftoggle{textcite}{y}{\textsc{y}}\nobreakspace}%
-  \ifnumequal{\value{listcount}}{1}
-    {\iffirstinits
-       {\usebibmacro{name:family-given}{#1}{#4}{#5}{#7}}
-       {\usebibmacro{name:family-given}{#1}{#3}{#5}{#7}}%
-     \ifblank{#3#5}
-       {}
-       {\usebibmacro{name:revsdelim}}}
-    {\iffirstinits
-       {\usebibmacro{name:given-family}{#1}{#4}{#5}{#7}}
-       {\usebibmacro{name:given-family}{#1}{#3}{#5}{#7}}}%
-  \usebibmacro{name:andothers}}
-\catcode`\&4\relax%
-\catcode`\@12\relax%
+% \catcode`\&3\relax%
+% \catcode`\@11\relax%
+% \DeclareNameFormat{family-given/given-family:smartend}{%
+  % \def\lbx@es@smartand@e##1&{%
+    % \endgroup \iftoggle{textcite}{e}{\textsc{e}}\nobreakspace}%
+  % \def\lbx@es@smartand@y##1&{%
+    % \endgroup \iftoggle{textcite}{y}{\textsc{y}}\nobreakspace}%
+  % \ifnumequal{\value{listcount}}{1}
+    % {\iffirstinits
+       % {\usebibmacro{name:family-given}{#1}{#4}{#5}{#7}}
+       % {\usebibmacro{name:family-given}{#1}{#3}{#5}{#7}}%
+     % \ifblank{#3#5}
+       % {}
+       % {\usebibmacro{name:revsdelim}}}
+    % {\iffirstinits
+       % {\usebibmacro{name:given-family}{#1}{#4}{#5}{#7}}
+       % {\usebibmacro{name:given-family}{#1}{#3}{#5}{#7}}}%
+  % \usebibmacro{name:andothers}}
+% \catcode`\&4\relax%
+% \catcode`\@12\relax%
 
 %-----------------------+
 % Cite command settings |
