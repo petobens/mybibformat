@@ -2,7 +2,7 @@
 %          File: mybibformat.sty
 %        Author: Pedro Ferrari
 %       Created: 27 Mar 2015
-% Last Modified: 27 Mar 2016
+% Last Modified: 08 Feb 2017
 %   Description: My bibformat to be used with Biblatex's authoryear comp style
 %===============================================================================
 %-------------+
@@ -291,7 +291,7 @@ unpublished]{title}{\mkbibquote{#1\isdot}}
 \langcommand{\bibfor}{for}{del}
 
 \defbibheading{bibbook}[\bibname]{\chapter{#1}}
-\defbibheading{subbib}[\refname\space\bibfor\ifnumgreater{\therefsection}%
+\defbibheading{subbib}[\refname\space\bibfor\space\ifnumgreater{\therefsection}%
   {\value{lastmainsegment}}{\appendixname}{\chaptername}\space%
   \ref*{refsection:\therefsection}]{%
   \setcounter{secnumdepth}{0}%
