@@ -12,9 +12,8 @@ else
 fi
 ```
 
-To use this citation style include the next lines in your TeX document preamble:
+To use this citation style, include the next lines in your TeX document preamble:
 ```latex
-\usepackage[style=authoryear-comp,backref=true,hyperref=false,
-backend=biber]{biblatex}
+\usepackage[style=authoryear-comp,backref=true,hyperref=false, backend=biber]{biblatex}
 \usepackage{mybibformat}
 ```
